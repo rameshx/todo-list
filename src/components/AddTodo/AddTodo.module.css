@@ -1,0 +1,23 @@
+.add-todo {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.input {
+  width: 300px;
+  height: 2rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border: var(--border);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.input:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: rgb(161, 161, 170) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
