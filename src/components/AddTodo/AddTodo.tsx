@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import styles from "./AddTodo.module.css";
 import { Button } from "../Button/Button";
 
@@ -6,7 +6,7 @@ interface AddTodoProps {
   onAdd: (todoText: string) => void;
 }
 
-export const AddTodo = (props: AddTodoProps) => {
+export const AddTodo = memo((props: AddTodoProps) => {
   const [value, setValue] = useState("");
 
   const handleAdd = () => {
@@ -32,4 +32,4 @@ export const AddTodo = (props: AddTodoProps) => {
       <Button onClick={handleAdd}>Add Todo</Button>
     </div>
   );
-};
+});
